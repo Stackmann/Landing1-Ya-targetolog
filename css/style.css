@@ -24,19 +24,16 @@ a {
     box-sizing: border-box;
 }
 
-.benefits {
+.benefits1 {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 24px;
     font-family: Arial;
     font-weight: 400;
 }
-
-/*@media(max-width: 1500px) {
-  .benefits {
-    flex-direction: column;
-}*/
 
 .benefit-header {
     color: inherit;
@@ -48,8 +45,70 @@ a {
     outline-offset: -2px;*/
 }
 
+.benefits2 {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 400;
+}
+
+.benefit-header2 {
+    /* color: inherit;
+    font-family: Arial;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px; */
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.benefit-header2-1 {
+    background-image: url("../img/benefits-icon-2-1.jpg");
+}
+.benefit-header2-2 {
+    background-image: url("../img/benefits-icon-2-2.jpg");
+}
+.benefit-header2-3 {
+    background-image: url("../img/benefits-icon-2-3.jpg");
+}
+
 .site-navigation-item {
   margin: 10px;
+}
+
+.site-navigation-item2 {
+  margin: 10px;
+  padding: 40px;
+}
+
+/*.site-navigation-item2::before {
+  content: "";
+
+  position: absolute;
+  width: 164px;
+  height: 145px;
+
+  background-color: #d0d0d0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
+
+.site-navigation-item2-1::before {
+  background-image: url("../img/benefits-icon-2-1.jpg");
+}
+.site-navigation-item2-2::before {
+  background-image: url("../img/benefits-icon-2-2.jpg");
+}
+.site-navigation-item2-3::before {
+  background-image: url("../img/benefits-icon-2-3.jpg");
 }
 
 .first-header {
@@ -63,6 +122,12 @@ a {
   outline-offset: -2px;*/
   /*box-sizing: border-box;*/
 }
+
+/* .first-header:after {
+  content: 'Больше 500px';
+  display: inline-block;
+} */
+
 .main-header {
   color: inherit;
   font-family: Arial;
@@ -75,6 +140,20 @@ a {
   outline-offset: -2px;*/
   /*box-sizing: border-box;*/
 }
+
+.main-header2 {
+  color: inherit;
+  font-family: Arial;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 50px;
+  padding-top: 20px;
+  /*outline: 3px solid red;
+  outline-offset: -2px;*/
+  /*box-sizing: border-box;*/
+}
+
 .add-header {
   color: inherit;
   font-family: Arial;
@@ -88,19 +167,49 @@ a {
   /*box-sizing: border-box;*/
 }
 
-.background {
+.add-header2 {
+  color: inherit;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 500px;
+  /* padding-left: 70px;
+  padding-right: 70px; */
+}
+
+.background1 {
   /*position: absolute;*/
   left: 0;
   top: 0;
   /*z-index: 0;*/
-  min-height: 550px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)), url("main-photo.png");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)), url("../img/main-photo.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
+}
+
+.no-background2 {
+  /*position: absolute;*/
+  left: 0;
+  top: 0;
+  /*z-index: 0;*/
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  /*background-attachment: scroll;*/
+}
+
+.emphasize {
+  font-weight: 700;
 }
 
 .separator {
@@ -178,6 +287,21 @@ a {
 }
 @keyframes blick {
   60%{left:100%}to{left:130%}
+}
+
+@media screen and (max-width: 700px) {
+  .benefits1 {
+    flex-direction: column;
+  }
+  .benefits2 {
+    flex-direction: column;
+  }
+  .main-header2 {
+    font-size: 30px;
+  }
+  /* .first-header:after {
+    content: 'Меньше 500px';
+  } */
 }
 
 /*.benefits:before {
